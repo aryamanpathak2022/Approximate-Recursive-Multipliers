@@ -9,11 +9,11 @@ module AxRM3 (
 
     mul2b mul1 (.a(a[1:0]), .b(b[1:0]), .product(product1)); 
     mul2b mul2 (.a(a[1:0]), .b(b[3:2]), .product(product2)); 
-    mul2b mul3 (.a(a[1:0]), .b(b[5:4]), .product(product3)); 
-    mul2b mul4 (.a(a[1:0]), .b(b[7:6]), .product(product4)); 
+    mul2b mul3 (.a(a[3:2]), .b(b[1:0]), .product(product3)); 
+    mul2b mul4 (.a(a[3:2]), .b(b[3:2]), .product(product4)); 
 
-    mul2b mul5 (.a(a[3:2]), .b(b[1:0]), .product(product5)); 
-    mul2b mul6 (.a(a[3:2]), .b(b[3:2]), .product(product6)); 
+    mul2b mul5 (.a(a[1:0]), .b(b[5:4]), .product(product5)); 
+    mul2b mul6 (.a(a[1:0]), .b(b[7:6]), .product(product6)); 
     mul2b mul7 (.a(a[3:2]), .b(b[5:4]), .product(product7));
     mul2b mul8 (.a(a[3:2]), .b(b[7:6]), .product(product8)); 
 
@@ -22,12 +22,12 @@ module AxRM3 (
 
     mul2a mul9 (.a(a[5:4]), .b(b[1:0]), .product(product9));  
     mul2a mul10(.a(a[5:4]), .b(b[3:2]), .product(product10)); 
-    mul2a mul11(.a(a[5:4]), .b(b[5:4]), .product(product11)); 
-    mul2a mul12(.a(a[5:4]), .b(b[7:6]), .product(product12)); 
+    mul2a mul11(.a(a[7:6]), .b(b[1:0]), .product(product11)); 
+    mul2a mul12(.a(a[7:6]), .b(b[3:2]), .product(product12)); 
 
-    exactOutput_2cross2 mul13(.a(a[7:6]), .b(b[1:0]), .product(product13)); 
-    exactOutput_2cross2 mul14(.a(a[7:6]), .b(b[3:2]), .product(product14)); 
-    exactOutput_2cross2 mul15(.a(a[7:6]), .b(b[5:4]), .product(product15)); 
+    exactOutput_2cross2 mul13(.a(a[5:4]), .b(b[5:4]), .product(product13)); 
+    exactOutput_2cross2 mul14(.a(a[7:6]), .b(b[5:4]), .product(product14)); 
+    exactOutput_2cross2 mul15(.a(a[5:4]), .b(b[7:6]), .product(product15)); 
     exactOutput_2cross2 mul16(.a(a[7:6]), .b(b[7:6]), .product(product16)); 
 
  
