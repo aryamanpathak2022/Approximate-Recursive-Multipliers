@@ -33,10 +33,10 @@ module AxRM3 (
  
     wire [15:0] sum1, sum2, sum3, sum4, sum5, sum6, sum7;
 
-    assign sum1 = {12'b0, product1} + ({10'b0, product2, 2'b0}) + ({8'b0, product3, 4'b0}) + ({6'b0, product4, 6'b0});
-    assign sum2 = ({10'b0, product5, 2'b0}) + ({8'b0, product6, 4'b0}) + ({6'b0, product7, 6'b0}) + ({4'b0, product8, 8'b0});
-    assign sum3 = ({8'b0, product9, 4'b0}) + ({6'b0, product10, 6'b0}) + ({4'b0, product11, 8'b0}) + ({2'b0, product12, 10'b0});
-    assign sum4 = ({6'b0, product13, 6'b0}) + ({4'b0, product14, 8'b0}) + ({2'b0, product15, 10'b0}) + ({product16, 12'b0});
+    assign sum1 = {12'b0, product1} + ({10'b0, product2, 2'b0}) + ({10'b0, product3, 2'b0}) + ({8'b0, product4, 4'b0});
+    assign sum2 = ({8'b0, product5, 4'b0}) + ({6'b0, product6, 6'b0}) + ({6'b0, product7, 6'b0}) + ({4'b0, product8, 8'b0});
+    assign sum3 = ({8'b0, product9, 4'b0}) + ({6'b0, product10, 6'b0}) + ({6'b0, product11, 6'b0}) + ({4'b0, product12, 8'b0});
+    assign sum4 = ({4'b0, product13, 8'b0}) + ({2'b0, product14, 10'b0}) + ({2'b0, product15, 10'b0}) + ({product16, 12'b0});
 
     // Final sum
     assign result = sum1 + sum2 + sum3 + sum4;

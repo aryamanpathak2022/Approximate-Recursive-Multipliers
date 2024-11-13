@@ -1,10 +1,12 @@
 module mul2b (
-    input wire a1, a0, b1, b0,  
-    output wire c2, c1, c0      
+    input wire [1:0] a,           // 2-bit input a
+    input wire [1:0] b,           // 2-bit input b
+    output wire [3:0] product     // 4-bit output product
 );
 
-    assign c2 = a1 & b1;
-    assign c1 = a1 & b1;  
-    assign c0 = a0 & b0;
+    assign product[3] = 0;                      // c3 is set to 0
+    assign product[2] = a[1] & b[1];            // c2
+    assign product[1] = (a[1] & b[0]) | (a[0] & b[1]); // c1
+    assign product[0] = a[0] & b[0];            // c0
 
 endmodule
